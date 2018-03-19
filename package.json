@@ -1,0 +1,22 @@
+{
+  "name": "olios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhorLarin/Olios.git"
+  },
+  "author": "IhorLarin\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DIhor Larin\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D    \u001b[3~\u001b[3~\u001b[ Larin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhorLarin/Olios/issues"
+  },
+  "homepage": "https://github.com/IhorLarin/Olios#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
