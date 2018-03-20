@@ -45,7 +45,7 @@ gulp.task('clean', function () {
 gulp.task('build', ['min-css', 'min-js'], function () {
 
   var buildCSS = gulp.src([
-    'app/css/libs.css',
+    'app/css/libs.min.css',
     'app/css/style.css'
   ])
     .pipe(gulp.dest('dist/css'));
