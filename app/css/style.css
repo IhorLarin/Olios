@@ -8,6 +8,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   background-color: #ededef;
+  overflow: hidden;
 }
 
 a {
@@ -124,7 +125,7 @@ ol, ul {
 .navbar {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -500px;
   padding: 80px 70px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -138,6 +139,13 @@ ol, ul {
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.navbar.active {
+  right: 0;
 }
 
 .menu-list {

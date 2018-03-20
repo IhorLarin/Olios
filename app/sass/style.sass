@@ -9,6 +9,7 @@ body
   font-family: 'Lato', sans-serif
   font-weight: 400
   background-color: #ededef
+  overflow: hidden
 
 a
   text-decoration: none
@@ -93,14 +94,16 @@ ol,ul
 .navbar
   position: absolute
   top: 0
-  right: 0
+  right: -500px
   padding: 80px 70px
   display: flex
   align-items: center
   height: 100%
-  //width: 350px
   background: #fff
   box-sizing: border-box
+  transition: .3s ease-in-out
+  &.active
+    right: 0
 
 .menu-list
   width: 100%
