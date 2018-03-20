@@ -333,3 +333,60 @@ template {
 [hidden] {
   display: none;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?6v9juj");
+  src: url("../fonts/icomoon.eot?6v9juj#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?6v9juj") format("truetype"), url("../fonts/icomoon.woff?6v9juj") format("woff"), url("../fonts/icomoon.svg?6v9juj#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e900";
+  color: #0023ff;
+}
+
+.icon-pin:before {
+  content: "\e901";
+  color: #dbdbdb;
+}
+
+.icon-remove:before {
+  content: "\e902";
+  color: #0023ff;
+}
+
+.icon-basket:before {
+  content: "\e903";
+  color: #d8d8d8;
+}
+
+.icon-home:before {
+  content: "\e904";
+  color: #d8d8d8;
+}
+
+.icon-in:before {
+  content: "\e905";
+  color: #d8d8d8;
+}
+
+.icon-search:before {
+  content: "\e906";
+  color: #d8d8d8;
+}
