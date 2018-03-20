@@ -358,35 +358,29 @@ template {
 
 .icon-add:before {
   content: "\e900";
-  color: #0023ff;
+  color: #000;
 }
 
 .icon-pin:before {
   content: "\e901";
-  color: #dbdbdb;
 }
 
 .icon-remove:before {
   content: "\e902";
-  color: #0023ff;
 }
 
 .icon-basket:before {
   content: "\e903";
-  color: #d8d8d8;
 }
 
 .icon-home:before {
   content: "\e904";
-  color: #d8d8d8;
 }
 
 .icon-in:before {
   content: "\e905";
-  color: #d8d8d8;
 }
 
 .icon-search:before {
   content: "\e906";
-  color: #d8d8d8;
 }

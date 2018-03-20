@@ -15,12 +15,12 @@ a {
 }
 
 img {
-  display: block;
   max-width: 100%;
 }
 
 ol, ul {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -37,6 +37,7 @@ ol, ul {
 }
 
 .container {
+  position: relative;
   width: 100%;
   height: 100vh;
   background: url("../img/bg.jpg") no-repeat bottom center;
@@ -55,7 +56,7 @@ ol, ul {
 .header__title {
   margin: 0 0 20px 0;
   font-size: 150px;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 2.5px;
 }
 
@@ -64,4 +65,217 @@ ol, ul {
   font-weight: 300;
   display: block;
   margin-bottom: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 30px 10px 100px 10px;
+  width: 90px;
+  background: #fff;
+}
+
+.sidebar .logo {
+  text-align: center;
+  font-size: 0;
+}
+
+.sidebar-list {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.sidebar-list__item {
+  margin: 40px 0;
+}
+
+.sidebar-list__link {
+  font-size: 30px;
+  color: #d8d8d8;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.sidebar-list__link:hover {
+  color: #0023ff;
+}
+
+.download-icon {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 30px;
+  color: #d8d8d8;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.download-icon:hover {
+  color: #0023ff;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 80px 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu-list {
+  width: 100%;
+}
+
+.menu-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.menu-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.menu-list__link {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-transform: uppercase;
+  color: #c1c1c1;
+  font-size: 16px;
+}
+
+.menu-list__link_icon {
+  width: 20%;
+  margin-left: 35px;
+}
+
+.all-categories {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px 0;
+  display: block;
+  width: 60%;
+  text-transform: uppercase;
+  letter-spacing: .45px;
+  font-weight: 400;
+  color: #0023ff;
+}
+
+.all-categories:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: auto;
+  width: 80%;
+  height: 2px;
+  background: #0023ff;
+}
+
+.hamburger {
+  position: absolute;
+  top: 80px;
+  right: 70px;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 20px;
+  height: 2px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #0023ff;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.hamburger span:before, .hamburger span:after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #0023ff;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.hamburger span:after {
+  top: -6px;
+}
+
+.hamburger.active span {
+  background: transparent;
+}
+
+.hamburger.active span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger.active span:after {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
