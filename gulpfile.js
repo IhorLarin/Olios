@@ -33,6 +33,11 @@ gulp.task('min-css', ['sass'], function () {
     .pipe(gulp.dest('app/css'))
 });
 
+gulp.task('icomoonFontsCopy', function () {
+  return gulp.src('app/libs/icomoon/fonts/*.*')
+    .pipe(gulp.dest('app/fonts'));
+});
+
 gulp.task('clean', function () {
   return del.sync('dist');
 });
@@ -79,7 +84,7 @@ gulp.task('browserSync', function () {
   })
 });
 
-gulp.task('watch', ['browserSync', 'min-css'], function () {
+gulp.task('watch', ['browserSync', 'min-css', 'icomoonFontsCopy'], function () {
   gulp.watch('app/sass/**/*.sass', ['sass']);
   gulp.watch('app/index.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
