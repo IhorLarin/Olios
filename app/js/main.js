@@ -1,6 +1,3 @@
-window.onload = function () {
-
-
   var hamburger = document.querySelector('.hamburger');
   var navbar = document.querySelector('.navbar');
   var menuLink = document.querySelectorAll('.navbar .menu-list__link');
@@ -16,8 +13,3 @@ window.onload = function () {
       menuToggle();
     };
   }
-
-};
-
-
-
