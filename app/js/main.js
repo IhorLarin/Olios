@@ -54,7 +54,9 @@ searchInput.onfocus = function () {
 };
 
 searchInput.onblur = function () {
-  labelSRC.classList.remove('focus');
+  if (searchInput.value === '') {
+    labelSRC.classList.remove('focus');
+  }
 };
 
 // якась хуйня
