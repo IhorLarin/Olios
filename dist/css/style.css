@@ -8,6 +8,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   background-color: #ededef;
+  overflow: hidden;
 }
 
 a {
@@ -72,9 +73,11 @@ ol, ul {
   top: 0;
   left: 0;
   bottom: 0;
+  z-index: 99999;
   padding: 30px 10px 100px 10px;
   width: 90px;
   background: #fff;
+  border-right: solid 1px #e7e7e7;
 }
 
 .sidebar .logo {
@@ -99,7 +102,7 @@ ol, ul {
   transition: .3s ease-out;
 }
 
-.sidebar-list__link:hover {
+.sidebar-list__link:hover, .sidebar-list__link.active {
   color: #0023ff;
 }
 
@@ -124,7 +127,7 @@ ol, ul {
 .navbar {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -500px;
   padding: 80px 70px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -138,6 +141,14 @@ ol, ul {
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 999;
+}
+
+.navbar.active {
+  right: 0;
 }
 
 .menu-list {
@@ -223,7 +234,7 @@ ol, ul {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.29);
   cursor: pointer;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .hamburger span {
@@ -278,4 +289,153 @@ ol, ul {
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
+}
+
+.search-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.search-section.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.search-wrapper {
+  width: 70%;
+}
+
+.search-form {
+  position: relative;
+  height: 150px;
+  margin-bottom: 200px;
+}
+
+.search-form label.src {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 150px;
+  letter-spacing: 1px;
+  opacity: .3;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.search-form label.src.focus {
+  font-size: 36px;
+  top: 70%;
+}
+
+.search-form .close {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.search-form .close:before, .search-form .close:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #b2b2b2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.search-form .close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.search-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  line-height: 150px;
+  width: 100%;
+  font-size: 64px;
+  font-weight: 100;
+  border: none;
+  border-bottom: solid 1px #e7e7e7;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.search-results {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-results .product {
+  margin-right: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.search-results .product__img {
+  width: 150px;
+  height: 150px;
+  margin-right: 25px;
+}
+
+.search-results .product__title {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.result-count {
+  font-weight: 700;
+  font-size: 30px;
 }
