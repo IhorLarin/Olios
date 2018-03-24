@@ -33,7 +33,9 @@ function searchSectionRemove() {
   setTimeout(function () {
     searchSection.style.display = 'none';
   }, 500);
-}
+  searchInput.value = '';
+  labelSRC.classList.remove('focus');
+};
 
 searchIcon.onclick = function () {
   searchSectionAdd();
@@ -58,6 +60,8 @@ searchInput.onblur = function () {
     labelSRC.classList.remove('focus');
   }
 };
+
+
 
 // якась хуйня
 for (var i = 0; menuLink.length; i++) {
