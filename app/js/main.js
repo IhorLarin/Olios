@@ -62,7 +62,6 @@ searchInput.onblur = function () {
 };
 
 
-
 // якась хуйня
 for (var i = 0; menuLink.length; i++) {
   menuLink[i].onclick = function () {

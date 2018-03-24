@@ -58,7 +58,7 @@ gulp.task('build', ['min-css', 'min-js'], function () {
     .pipe(gulp.dest('dist/js'));
 
 
-  var buildHTML = gulp.src('app/index.html')
+  var buildHTML = gulp.src('app/*.html')
     .pipe(gulp.dest('dist'));
 
 
@@ -86,7 +86,7 @@ gulp.task('browserSync', function () {
 
 gulp.task('watch', ['browserSync', 'min-css', 'icomoonFontsCopy'], function () {
   gulp.watch('app/sass/**/*.sass', ['sass']);
-  gulp.watch('app/index.html', browserSync.reload);
+  gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
